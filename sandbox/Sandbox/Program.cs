@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        
         Console.WriteLine("What is your first name? ");
         string first = Console.ReadLine();
 
@@ -13,4 +13,4 @@ class Program
         
         Console.WriteLine($"Your name is {last}, {first}, {last}");
     }
-}
+} 
