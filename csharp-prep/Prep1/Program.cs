@@ -12,14 +12,13 @@ class Program
         string last = Console.ReadLine();
         
         Console.WriteLine($"Your name is {last}, {first}, {last}");
-    }
         Console.WriteLine("Hello Prep1 World!");
         Console.Write("What is your grade? ");
         string answer = Console.ReadLine();
         int percent = int.Parse(answer);
 
         string letter = "";
-
+        
         if (percent >= 90)
         {
             letter = "A";
@@ -49,5 +48,5 @@ class Program
         else {
             Console.WriteLine("You have failed the class");
         }
-    }  
+    }
 }
