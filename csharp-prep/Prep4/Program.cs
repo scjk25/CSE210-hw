@@ -5,9 +5,9 @@ class Program
     static void Main(string[] args)
     {
         List<int> numbers = new List<int>();
-        int userNumber = -1;
 
-        while (userNumber != 0);
+        int userNumber = -1;
+        while (userNumber != 0)
         {
             Console.Write("Enter in a number type 0 when finished ");
             string Response = Console.ReadLine();
