@@ -5,23 +5,19 @@ public class Reflection : Activity
     private List<string> _prompts = new List<string>();
     private List<string> _questions = new List<string>();
 
-    public Reflection(string startMessage, string endMessage, string instructions): base(startMessage, endMessage, instructions)
+    public Reflection(string startMessage, string endMessage, string instructions): 
+    base(startMessage, endMessage, instructions)
     {
 
     }
 
       // display instructions for each activity
-    public void displayInstructions()
+    public int displayInstructions()
     {
-        string instructions = "For this activity ponder on the prompts and questions as they appear";
-        Console.WriteLine(instructions);
-        string begin = "When ready type start";
-        Console.WriteLine(begin);
-        begin = Console.ReadLine();
-         if (begin != "start")
-            {
-                Console.WriteLine("Please type start");
-            }
+        Console.WriteLine(_instructions);
+        Console.WriteLine("How long would you like the program to run? ");
+        int input = Int32.Parse(Console.ReadLine());
+        return input;
     }
     
     // display prompts 

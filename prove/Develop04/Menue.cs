@@ -26,30 +26,41 @@ public class Menue
         // do the breathing activity
         if (_choice == 1)
         {
-            Breathing breathing = new Breathing("","","");
-            breathing.displayInstructions();
+            Breathing breathing = new Breathing("Welcome to the Breathing Activity!",
+                "Well done you have completed the Breathing activity",
+                "For this activity breath in and breath out when instruced to do so");
+            int input = breathing.displayInstructions();
             System.Console.Clear();
-            breathing.countDown();
-    
+            breathing.countDown(input);
+            breathing.DisplayEndmessage();
         }
 
         // do the reflection activity
         else if (_choice == 2)
         {
-            Reflection reflection = new Reflection("","","");
+            Reflection reflection = new Reflection("Welcome To the breathing activity",
+            "Well Done you have completed the reflection activity",
+            "For this activity ponder on the prompts and questions as they appear");
+            reflection.displayMessage();
             reflection.displayInstructions();
             System.Console.Clear();
             reflection.displayPrompt();
             reflection.displayQuestion();
+            reflection.DisplayEndmessage();
         }
         
         else if (_choice == 3)
         {
-            Listing listing = new Listing("", "", "","");
+            Listing listing = new Listing("Welcome to the listing activity", 
+            "Well done you have completed the Lisiting activity", 
+            "For this activty you are given a propmt. While being timed start listing your answer to the question.",
+            "");
+            listing.displayMessage();
             listing.displayInstructions();
             System.Console.Clear();
             listing.displayListPrompt();
             listing.GetResponse();
+            listing.DisplayEndmessage();
         }
 
         else if (_choice == 4)

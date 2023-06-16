@@ -8,17 +8,12 @@ public class Breathing : Activity
         
     }
 
-      public void displayInstructions()
+      public int displayInstructions()
     {
-        string instructions = "For this activity breath in and breath out when instruced to do so";
-        Console.WriteLine(instructions);
-        string begin = "When ready type start";
-        Console.WriteLine(begin);
-        begin = Console.ReadLine();
-         if (begin != "start")
-            {
-                Console.WriteLine("Please type start");
-            }
+        Console.WriteLine(_instructions);
+        Console.WriteLine("How long in seconds wpuld you like to run the program? ");
+        int input = Int32.Parse(Console.ReadLine());
+        return input;
     }
     // show the the message breath in 
     public void displayInhale()
@@ -36,10 +31,10 @@ public class Breathing : Activity
     }
 
     // have a count down between breaths
-    public void countDown()
-    {   
+    public void countDown(int input)
+    {
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(30);
+        DateTime endTime = startTime.AddSeconds(input);
 
         while(startTime <= endTime)
         {
@@ -47,7 +42,7 @@ public class Breathing : Activity
             displayExhale();
             startTime = DateTime.Now;
         }
-        Console.WriteLine("Well Done you have completed the activity\n");
+        // Console.WriteLine("Well Done you have completed the activity\n");
     }
 
     public void timeInBetween()

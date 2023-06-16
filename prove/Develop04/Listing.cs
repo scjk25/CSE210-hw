@@ -4,23 +4,20 @@ public class Listing : Activity
 {
     private List<string> _promptQuestions = new List<string>();
 
-    public Listing(string startMessage, string endMessage, string instructions, string response) : base(startMessage, endMessage, instructions)
+    public Listing(string startMessage, string endMessage, string instructions, string response) : 
+    base(startMessage, endMessage, instructions)
     {
        
     }
 
-    public void displayInstructions()
+    public int displayInstructions()
     {
-        string instructions = "For this activty you are given a propmt. While being timed start listing your answer to the question. you have 30 seconds";
-        Console.WriteLine(instructions);
-        string begin = "When ready type start";
-        Console.WriteLine(begin);
-        begin = Console.ReadLine();
+        Console.WriteLine(_instructions);
+        Console.WriteLine("How long in seconds wpuld you like to run the program? ");
+        int input = Int32.Parse(Console.ReadLine());
+        return input;
 
-            if (begin != "start")
-            {
-                Console.WriteLine("Please type start");
-            }
+    
     }
     
 
@@ -54,17 +51,8 @@ public class Listing : Activity
             _response.Add(userResponse);
         }
 
-        Console.WriteLine("User responses:");
-
-        // Display the list thru a for loop. 
-        for (int i = 0; i < _response.Count; i++)
-        {
-            Console.WriteLine(_response[i]);
-        }
-
         int responseCount = _response.Count;
-        Console.WriteLine("Total responses: " + responseCount);
-        Console.WriteLine("\nWell done you have completed the Listing activity\n");
+        Console.WriteLine("\nTotal responses: " + responseCount);
     }
     
 }
