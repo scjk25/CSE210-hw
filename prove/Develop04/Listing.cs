@@ -4,7 +4,7 @@ public class Listing : Activity
 {
     private List<string> _promptQuestions = new List<string>();
 
-    public Listing(string startMessage, string endMessage, string instructions, string response) : 
+    public Listing(string startMessage, string endMessage, string instructions) : 
     base(startMessage, endMessage, instructions)
     {
        

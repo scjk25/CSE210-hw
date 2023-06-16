@@ -1,11 +1,15 @@
 public class Breathing : Activity
-{
+{   
+    private string _inhale;
+    private string _exhale;
 
 
-    public Breathing(string startMessage, string endMessage, string instructions): 
+    public Breathing(string startMessage, string endMessage, string instructions,
+    string inhale, string exhale): 
     base(startMessage, endMessage, instructions)
     {
-        
+        _inhale = inhale;
+        _exhale = exhale;
     }
 
       public int displayInstructions()
@@ -18,7 +22,7 @@ public class Breathing : Activity
     // show the the message breath in 
     public void displayInhale()
     {   
-        Console.WriteLine("\nBreath in\n");
+        Console.WriteLine($"Breath in");
         timeInBetween();
     }
 
@@ -26,7 +30,7 @@ public class Breathing : Activity
     public void displayExhale()
     {   
         
-        Console.WriteLine("\nBreath out\n");
+        Console.WriteLine($"Breath out");
         timeInBetween();
     }
 

@@ -13,9 +13,12 @@ public class Activity
         _startMessage = startMessage;
         _endMessage = endMessage;
         _instructions = instructions;
+        
     }
 
     // show the starting message and ending message to each of the activites 
+
+    
     public void displayMessage()
     {
         Console.WriteLine(_startMessage);

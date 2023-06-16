@@ -1,7 +1,5 @@
 public class Menue 
 {   
-
-
     public Menue()
     {
         Activity activity = new Activity("","","");
@@ -27,8 +25,11 @@ public class Menue
         if (_choice == 1)
         {
             Breathing breathing = new Breathing("Welcome to the Breathing Activity!",
-                "Well done you have completed the Breathing activity",
-                "For this activity breath in and breath out when instruced to do so");
+                "\nWell done you have completed the Breathing activity\n",
+                "For this activity breath in and breath out when instruced to do so", 
+                "", "");
+
+            breathing.displayMessage();
             int input = breathing.displayInstructions();
             System.Console.Clear();
             breathing.countDown(input);
@@ -38,8 +39,8 @@ public class Menue
         // do the reflection activity
         else if (_choice == 2)
         {
-            Reflection reflection = new Reflection("Welcome To the breathing activity",
-            "Well Done you have completed the reflection activity",
+            Reflection reflection = new Reflection("Welcome to the Reflection activity",
+            "\nWell Done you have completed the reflection activity\n",
             "For this activity ponder on the prompts and questions as they appear");
             reflection.displayMessage();
             reflection.displayInstructions();
@@ -52,9 +53,9 @@ public class Menue
         else if (_choice == 3)
         {
             Listing listing = new Listing("Welcome to the listing activity", 
-            "Well done you have completed the Lisiting activity", 
-            "For this activty you are given a propmt. While being timed start listing your answer to the question.",
-            "");
+            "\nWell done you have completed the Lisiting activity\n", 
+            "For this activty you are given a propmt. While being timed start listing your answer to the question."
+            );
             listing.displayMessage();
             listing.displayInstructions();
             System.Console.Clear();
