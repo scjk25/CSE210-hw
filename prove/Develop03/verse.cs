@@ -22,9 +22,3 @@ public class Word
         Console.WriteLine(_word);
     }
 }
-
-
-
-
-
-
