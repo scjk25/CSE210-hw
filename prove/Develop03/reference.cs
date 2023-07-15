@@ -1,33 +1,40 @@
-using System;
 
 public class Referance
 {
-    private string _book;
-    private string _chaptersVerses;
-    private Scripture _scripture;
+   private string _book;
+   private int _chapter;
+   private int _verse;
 
-    public Referance(string book, string chaptersVerses, string verse)
-    {
+   public string GetBook()
+   {
+        return _book;
+   }
+
+   public int GetChapter()
+   {
+        return _chapter;
+   }
+
+   public int GetVerse()
+   {
+        return _verse;
+   }
+
+   public void SetBook(string book)
+   {
         _book = book;
-        _chaptersVerses = chaptersVerses;
-        _scripture = new Scripture(verse);
-    }
+   }
 
-    public void DisplayReferance()
-    {
-        Console.WriteLine($"{_book} {_chaptersVerses}");
-        _scripture.DisplayScripture();
-    }
+   public void SetChapter(int chapter)
+   {
+        _chapter = chapter;
+   }
 
-    public Scripture GetScripture()
-    {
-        return _scripture;
-    }
+   public void SetVerse(int verse)
+   {
+        _verse = verse;
+   }
 
-    public bool GuessScripture(string guess)
-    {
-        return string.Equals(guess, _scripture.Verse, StringComparison.OrdinalIgnoreCase);
-    }
 }
 
 

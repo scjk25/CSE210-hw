@@ -1,30 +1,34 @@
-using System;
-
 public class Word
 {
-    private string _word;
+    private List<string> _word;
+    private string _verse;
 
-    public string Text { get { return _word; } }
-
-    public Word(string word)
+    public Word()
     {
-        _word = word;
+        _word = new List<string>
+        {
+            "For", "God", "so", "loved", "the", "world", "he","gave","his", "only","begotton", "that", "who", "so", "ever", "belivith", "in", "him", "shall", "have", "everlasting", "life"
+        };
+    }
+    public string GetWord()
+    {
+       Random random = new Random();
+       int index = random.Next(_word.Count);
+       return _word[index];
     }
 
-    public void HideWord()
+    public void SetVerse(string word)
     {
-        int amount = _word.Length;
-        _word = new string('_', amount);
+       _word.Add(word);
     }
 
-    public void DisplayWord()
+    public string GetText()
     {
-        Console.WriteLine(_word);
+        return _verse;
+    }
+
+    public void SetText(string verse)
+    {
+        _verse = verse;
     }
 }
-
-
-
-
-
-

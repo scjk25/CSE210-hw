@@ -1,48 +1,28 @@
-using System;
-
 public class Scripture
 {
-    private string _verse;
-    private Word[] _words;
 
-    public string Verse { get { return _verse; } }
-    public Word[] Words { get { return _words; } }
-
-    public Scripture(string verse)
+    public void Referance()
     {
-        _verse = verse;
-        string[] words = verse.Split(' ');
-        _words = new Word[words.Length];
-        for (int i = 0; i < words.Length; i++)
-        {
-            _words[i] = new Word(words[i]);
-        }
+        Referance referance = new Referance();
+        referance.SetBook("John");
+        referance.SetChapter(3);
+        referance.SetVerse(16);
+
+        Console.WriteLine($"{referance.GetBook()}:{referance.GetChapter()}-{referance.GetVerse()}");
     }
 
-    public void DisplayScripture()
-    {
-        Console.WriteLine(_verse);
+
+    public void Verse()
+    {   
+        
+        Word word = new Word();
+        Console.WriteLine($"{word.GetWord()}");
     }
 
-    public void HideAllWords()
+    public void Text()
     {
-        foreach (Word word in _words)
-        {
-            word.HideWord();
-        }
-    }
-
-    public void DisplayAllWords()
-    {
-        foreach (Word word in _words)
-        {
-            word.DisplayWord();
-        }
+        Word word = new Word();
+        word.SetText("For God so loved the world he gave his only begotton son that who so ever beliveth in him shall have everlasting life");
+        Console.WriteLine($"{word.GetText()}");
     }
 }
-
-
-
-
-
-

@@ -7,8 +7,7 @@ class Program
 
         Menue menue = new Menue();
         menue.displayActivites();
-        
-    }
 
-   
+    }
+    
 }
