@@ -1,4 +1,32 @@
 public class Breathing : Activity
+<<<<<<< HEAD
+{
+    private string breath_in;
+    private string breath_out;
+
+    public Breathing(string activity_name, string start_message, string description, int _time, string ending_message) :
+    base(activity_name, start_message, description, _time, ending_message)
+    {
+        
+    }
+
+    public void DoActivity(string inhale, string exhale)
+
+    {
+        breath_in = inhale;
+        breath_out = exhale;
+
+        Console.WriteLine("\nStart in\n");
+          for (int i = 5; i > 0; i--)
+        {   
+            Console.WriteLine(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+
+        Console.WriteLine($"\n{inhale}\n");
+        for(int i = 5; i > 0; i--)
+=======
 {   
     private string _inhale;
     private string _exhale;
@@ -53,13 +81,29 @@ public class Breathing : Activity
     {
          
         for(int i = 5; i >0; i--)
+>>>>>>> bfbb845825e2a6b73ed3118be33fbc934f733e1d
         {
             Console.Write(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
+<<<<<<< HEAD
+        
+        Console.WriteLine($"\n{exhale}\n");
+
+        for (int i = 5; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+      
+        Console.WriteLine("Well done you are now done with the breathing activity");
+    }
+=======
 
     }
     
 
+>>>>>>> bfbb845825e2a6b73ed3118be33fbc934f733e1d
 }
